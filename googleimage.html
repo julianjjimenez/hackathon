@@ -19,7 +19,7 @@
   <body>
     <h1>This is Page One</h1>
     
-    <div id = "map" style="height:450px"></div>
+    <div id = "map" style="height:450px;width:800px"></div>
     
     <script>
       
@@ -27,15 +27,36 @@
         var myLatLng = {lat: 56.5110, lng: 3.5156};
 
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 18,
+          zoom: 2,
           center: myLatLng
         });
-
-        // var marker = new google.maps.Marker({
-        //   position: myLatLng,
-        //   map: map,
-        //   title: 'Hello World!'
-        // });
+        
+        var battles = [
+          { title: "North Sea", position: {lat: 56.5110, lng: 3.5156} },
+         {title: "English Channel", position: {lat: 50.1347, lng: 0.3571} }, 
+         {title: "Atlantic", position: {lat: 20, lng: -53.3833796} },
+          { title: "Mediterranean", position: {lat: 34.5531, lng: 18.0480} },
+        { title:  "Black Sea", position: {lat: 43.4130, lng: 34.2993} },
+        { title:  "Baltic Sea", position: {lat: 58.4880, lng: 19.8633} }
+        ];
+        
+        for(var i=0; i <battles.length; i++){
+           new google.maps.Marker({
+            position: battles[i].position,
+            map: map,
+            animation: google.maps.Animation.DROP,
+            title: battles[i].title
+          }).addListener('click', toggleBounce);
+        }
+        
+         function toggleBounce() {
+          var marker = this;
+          if (marker.getAnimation() !== null) {
+            marker.setAnimation(null);
+          } else {
+            marker.setAnimation(google.maps.Animation.BOUNCE);
+          }
+        }
       }
       
     </script>

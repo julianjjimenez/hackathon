@@ -12,11 +12,11 @@ body{
 }
 
 .carousel-inner{
-  max-height: 200px
+  max-height: 500px !important;
  
 }
     .tales {
-width:100%;
+  max-height: 50px !important;
 
 }
 

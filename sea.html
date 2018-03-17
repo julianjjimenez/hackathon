@@ -19,6 +19,10 @@
 </head>
 
 <body>
+<div id="navbar"> </div>
+<script>
+$( "#navbar" ).load( "navbar.html" );
+</script>
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
@@ -47,24 +51,41 @@
         <h4> U Boat</h4>
         <p> U-boat is an anglicised version of the German word, a shortening of Unterseeboot, literally "undersea boat".[1] While the German term refers to any submarine, the English one (in common with several other languages) refers specifically to military
           submarines operated by Germany, particularly in the First and Second World Wars. </p>
+          <img src = 'http://coastguard.dodlive.mil/files/2013/04/spencer1624_300.jpg' class='img-thumbnail'>
         <h4> Submarine</h4>
         <p> A submarine (or simply sub) is a watercraft capable of independent operation underwater. It differs from a submersible, which has more limited underwater capability. The term most commonly refers to a large, crewed vessel.</p>
+        <img src = 'http://navylive.dodlive.mil/files/2015/10/131125-N-TN558-013.jpg'class='img-thumbnail'>
         <h4> Destroyer</h4>
         <p> In naval terminology, a destroyer is a fast, maneuverable long-endurance warship intended to escort larger vessels in a fleet, convoy or battle group and defend them against smaller powerful short-range attackers. They were originally developed
           in the late 19th century as a defence against torpedo boats, and by the time of the Russo-Japanese War</p>
+          <img src = 'https://c1.staticflickr.com/5/4642/39279801162_79e44b19c9_b.jpg'class='img-thumbnail'>
         <h4> Torepdo Boat</h4>
         <p> A torpedo boat is a relatively small and fast naval ship designed to carry torpedoes into battle.</p>
+        <img src = 'https://upload.wikimedia.org/wikipedia/commons/6/6a/Motor_Torpedo_Boat_PT-658.jpg'class='img-thumbnail'>
         <h4> Battle Cruise</h4>
         <p>The battlecruiser, or battle cruiser, was a type of capital ship of the first half of the 20th century. They were similar in size, cost, and armament to battleships, but they generally carried less armour in order to attain faster speeds.</p>
+        <img src = 'https://upload.wikimedia.org/wikipedia/commons/0/00/Russian_Battle_Cruiser_Pyotr_Velikiy.jpg'class='img-thumbnail'>
       </div>
       <div class="col-lg-12" id="theaters">
         <h1>Theaters</h1>
-
-        <p> </p>
+        <div id = "map" style="height:450px;width:800px"></div>
       </div>
-
     </div>
   </div>
+       <script>
+          window.battles = [
+          { title: "North Sea", position: {lat: 56.5110, lng: 3.5156} },
+         {title: "English Channel", position: {lat: 50.1347, lng: 0.3571} }, 
+         {title: "Atlantic", position: {lat: 20, lng: -53.3833796} },
+          {title: "Mediterranean", position: {lat: 34.5531, lng: 18.0480} },
+        { title:  "Black Sea", position: {lat: 43.4130, lng: 34.2993} },
+        { title:  "Baltic Sea", position: {lat: 58.4880, lng: 19.8633} }
+        ];
+    </script>
+    <script src="./map.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBprFbIEzEq-NOislCYDYoj_ie5pDOMTWU&callback=window.initMap">
+    </script>
 </body>
 
 </html>

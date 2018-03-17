@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>ScriptEd Advanced Hackathon</title>
+  <title>seaairspace.org</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,18 +20,9 @@
 </head>
 
 <body>
-  <p>
-    <a href="page-one.html"> Link to page-one.html</a>
-  </p>
-  <h1>The Legacy Of Sea, Air, and Space</h1>
 
-  <ul class="nav">
-    <li><a href="/Sea/">Sea</a></li>
-    <li><a href="/Air/">Air</a></li>
-    <li><a href="/Space/">Space</a></li>
-  </ul>
-  <br>
 
+<div id="result"> </div>
 
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -47,24 +38,24 @@
         <div class="item active">
           <img class="tales" src="image/naviship.jpg" alt="Sea">
           <div class="carousel-caption">
-            <h3>The sea</h3>
+            <h1>The sea</h1>
             <p></p>
           </div>
         </div>
 
         <div class="item">
-          <img class="tales" src="Jets.jpg" alt="Air">
+          <img class="tales" src="image/Jets.jpg" alt="Air">
           <div class="carousel-caption">
-            <h3>The Sky</h3>
-            <p></p>
+            <h1>The sky</h1>
+            <p> "A top World War II ace once said that fighter pilots fall into two broad categories: those who go out to kill and those who, secretly, desperately, know they are going to get killed—the hunters and the hunted." - by General Nathan F. Twinning, USAF</p>
           </div>
         </div>
 
         <div class="item">
-          <img class="tales" src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fasgardia.space%2Fassets%2Fmain_page%2Fimages%2Fsatellite.570252.png&imgrefurl=https%3A%2F%2Fasgardia.space%2Fen%2F&docid=2TuyHWrwvD686M&tbnid=xsKCRZ4BuENjxM%3A&vet=12ahUKEwjO4NyHivTZAhUNh-AKHd1yDRE4ZBAzKAAwAHoECAAQAQ..i&w=681&h=450&bih=659&biw=1280&q=space&ved=2ahUKEwjO4NyHivTZAhUNh-AKHd1yDRE4ZBAzKAAwAHoECAAQAQ&iact=mrc&uact=8" alt= "Space">
+          <img class="tales" src="image/space.jpeg" alt= "Space">
           <div class="carousel-caption">
-            <h3>Space</h3>
-            <p></p>
+            <h1>Space</h1>
+            <p>“The single simplest reason why human space flight is necessary is this, stated as plainly as possible: keeping all your breeding pairs in one place is a retarded way to run a species.” - by Warren Ellis</p>
           </div>
         </div>
       </div>
@@ -80,6 +71,9 @@
   </a>
     </center>
   </div>
+  <script>
+$( "#result" ).load( "navbar.html" );
+</script>
 </body>
 
 </html>
