@@ -18,8 +18,29 @@
   </head>
   <body>
     <h1>This is Page One</h1>
-    <p>
-      <a href="index.html"> Link back to index.html</a>
-    </p>
+    
+    <div id = "map" style="height:450px"></div>
+    
+    <script>
+      
+      function initMap(){
+        var myLatLng = {lat: 56.5110, lng: 3.5156};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 18,
+          center: myLatLng
+        });
+
+        // var marker = new google.maps.Marker({
+        //   position: myLatLng,
+        //   map: map,
+        //   title: 'Hello World!'
+        // });
+      }
+      
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBprFbIEzEq-NOislCYDYoj_ie5pDOMTWU&callback=initMap">
+    </script>
   </body>
 </html>

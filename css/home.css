@@ -12,14 +12,16 @@ body{
 }
 
 .carousel-inner{
-  max-height: 200px
+  
  
 }
     .tales {
 width:100%;
-
 }
 
+#myCarousel{
+    height: 500px
+}
 
 solid 
     {border-style: solid;}
